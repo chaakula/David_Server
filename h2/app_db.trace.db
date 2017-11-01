@@ -1,0 +1,153 @@
+2017-10-11 11:36:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USERREGISTRATION(ID INTEGER PRIMARY KEY AUTOINCREMENT[*], 
+				  FBUYER VARCHAR(1), 
+                  NAME VARCHAR(30), ADDRESS VARCHAR(100),
+                  STATE VARCHAR(30), ZIPCODE VARCHAR(10),
+                  SSN VARCHAR(9), JOBTIME INTEGER,
+                  PAYFREQUENCY INTEGER, REASON VARCHAR(100),
+                  COSIGNER VARCHAR(1),
+                  C_NAME VARCHAR(30), C_ADDRESS VARCHAR(100),
+                  C_STATE VARCHAR(30), C_ZIPCODE VARCHAR(10),
+                  C_SSN VARCHAR(9), C_JOBTIME INTEGER,
+                  C_PAYFREQUENCY INTEGER,
+				  CREATED_TIME DATE
+                 ) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE UserRegistration(ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+				  FBUYER VARCHAR(1), 
+                  NAME VARCHAR(30), ADDRESS VARCHAR(100),
+                  STATE VARCHAR(30), ZIPCODE VARCHAR(10),
+                  SSN VARCHAR(9), JOBTIME INTEGER,
+                  PAYFREQUENCY INTEGER, REASON VARCHAR(100),
+                  COSIGNER VARCHAR(1),
+                  C_NAME VARCHAR(30), C_ADDRESS VARCHAR(100),
+                  C_STATE VARCHAR(30), C_ZIPCODE VARCHAR(10),
+                  C_SSN VARCHAR(9), C_JOBTIME INTEGER,
+                  C_PAYFREQUENCY INTEGER,
+				  CREATED_TIME DATE
+                 ) [42001-192]
+2017-10-11 11:37:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USERREGISTRATION(ID INTEGER PRIMARY KEY AUTOINCREMENT[*], 
+				  FBUYER VARCHAR(1), 
+                  NAME VARCHAR(30), ADDRESS VARCHAR(100),
+                  STATE VARCHAR(30), ZIPCODE VARCHAR(10),
+                  SSN VARCHAR(9), JOBTIME INTEGER,
+                  PAYFREQUENCY INTEGER, REASON VARCHAR(100),
+                  COSIGNER VARCHAR(1),
+                  C_NAME VARCHAR(30), C_ADDRESS VARCHAR(100),
+                  C_STATE VARCHAR(30), C_ZIPCODE VARCHAR(10),
+                  C_SSN VARCHAR(9), C_JOBTIME INTEGER,
+                  C_PAYFREQUENCY INTEGER,
+				  CREATED_TIME TIMESTAMP
+                 ) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE UserRegistration(ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+				  FBUYER VARCHAR(1), 
+                  NAME VARCHAR(30), ADDRESS VARCHAR(100),
+                  STATE VARCHAR(30), ZIPCODE VARCHAR(10),
+                  SSN VARCHAR(9), JOBTIME INTEGER,
+                  PAYFREQUENCY INTEGER, REASON VARCHAR(100),
+                  COSIGNER VARCHAR(1),
+                  C_NAME VARCHAR(30), C_ADDRESS VARCHAR(100),
+                  C_STATE VARCHAR(30), C_ZIPCODE VARCHAR(10),
+                  C_SSN VARCHAR(9), C_JOBTIME INTEGER,
+                  C_PAYFREQUENCY INTEGER,
+				  CREATED_TIME TIMESTAMP
+                 ) [42001-192]
+2017-10-11 11:38:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USERREGISTRATION(ID INTEGER PRIMARY KEY AUTOINCREMENT[*], 
+				  FBUYER VARCHAR(1), 
+                  NAME VARCHAR(30), ADDRESS VARCHAR(100),
+                  STATE VARCHAR(30), ZIPCODE VARCHAR(10),
+                  SSN VARCHAR(9), JOBTIME INTEGER,
+                  PAYFREQUENCY INTEGER, REASON VARCHAR(100),
+                  COSIGNER VARCHAR(1),
+                  C_NAME VARCHAR(30), C_ADDRESS VARCHAR(100),
+                  C_STATE VARCHAR(30), C_ZIPCODE VARCHAR(10),
+                  C_SSN VARCHAR(9), C_JOBTIME INTEGER,
+                  C_PAYFREQUENCY INTEGER,
+		 CREATED_TIME TIMESTAMP
+                 ) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE UserRegistration(ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+				  FBUYER VARCHAR(1), 
+                  NAME VARCHAR(30), ADDRESS VARCHAR(100),
+                  STATE VARCHAR(30), ZIPCODE VARCHAR(10),
+                  SSN VARCHAR(9), JOBTIME INTEGER,
+                  PAYFREQUENCY INTEGER, REASON VARCHAR(100),
+                  COSIGNER VARCHAR(1),
+                  C_NAME VARCHAR(30), C_ADDRESS VARCHAR(100),
+                  C_STATE VARCHAR(30), C_ZIPCODE VARCHAR(10),
+                  C_SSN VARCHAR(9), C_JOBTIME INTEGER,
+                  C_PAYFREQUENCY INTEGER,
+		 CREATED_TIME TIMESTAMP
+                 ) [42001-192]
+2017-10-11 13:11:28 jdbc[14]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:187)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:129)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:102)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:735)
+	at org.h2.server.web.WebApp.login(WebApp.java:955)
+	at org.h2.server.web.WebApp.process(WebApp.java:211)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:125)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:162)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:528)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1099)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:670)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1520)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1476)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 51 more
+2017-10-11 19:14:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Table "TABE" not found; SQL statement:
+update tabe USERREGISTRATION set NAME='Richard Robbin' where ID = 1 [42102-192]
+2017-10-11 19:15:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USERREGISTRATION SET ADDRESS='Richard Street' WHERE ID = 1
+SELECT[*] * FROM USERREGISTRATION "; SQL statement:
+update USERREGISTRATION set ADDRESS='Richard Street' where ID = 1
+select * from USERREGISTRATION [42000-192]
+2017-10-11 19:15:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "update USERREGISTRATION set STATE=[*]'Phoenix where ID = 1"; SQL statement:
+update USERREGISTRATION set STATE='Phoenix where ID = 1 [42000-192]
+2017-10-11 19:16:17 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USERREGISTRATION SET STATE='Phoenix' WHERE ID = 1
+SELECT[*] * FROM USERREGISTRATION "; SQL statement:
+update USERREGISTRATION set STATE='Phoenix' where ID = 1
+select * from USERREGISTRATION [42000-192]
